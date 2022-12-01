@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['y_12231',['y',['../structekf_1_1OFObservation.html#a3a069124f36509c4810cfd11fe7be3fa',1,'ekf::OFObservation::y()'],['../structinterest__point_1_1BRISK__Impl_1_1BriskPatternPoint.html#a9436aa0133d5e771a39f4b10be25742b',1,'interest_point::BRISK_Impl::BriskPatternPoint::y()'],['../structekf__bag_1_1OFFeature.html#a0e7687eb22c8040ff0f1c0beb494b136',1,'ekf_bag::OFFeature::y()']]],
-  ['y1_5f_12232',['y1_',['../classLineBW.html#ae9802a2862fa52c634d23b09522f5614',1,'LineBW']]],
-  ['y2_5f_12233',['y2_',['../classLineBW.html#a71c28279de52c4dd35d377f4299c8717',1,'LineBW']]],
-  ['y_5f_12234',['y_',['../classRectBW.html#ab6752ae83a0f8a0d1c06752abfaae776',1,'RectBW::y_()'],['../classCenteredText.html#acb30b3e86ba0824952e545bb16027ecf',1,'CenteredText::y_()']]]
+  ['x_13456',['x',['../structinterest__point_1_1BRISK__Impl_1_1BriskPatternPoint.html#a6542acb3f2a2606c604d5f32bcb13a7a',1,'interest_point::BRISK_Impl::BriskPatternPoint']]],
+  ['x1_5f_13457',['x1_',['../classLineBW.html#adbd4f6f8e2326b2e3d50bea7d1147a52',1,'LineBW']]],
+  ['x2_5f_13458',['x2_',['../classLineBW.html#a3b9397f3f704112a2241a2682e068b11',1,'LineBW']]],
+  ['x_5f_13459',['x_',['../classRectBW.html#acc985fee946835bf64741ec29f927a5b',1,'RectBW::x_()'],['../classCenteredText.html#a594b9660583cd8ca0ee5a121f40ea00e',1,'CenteredText::x_()']]]
 ];

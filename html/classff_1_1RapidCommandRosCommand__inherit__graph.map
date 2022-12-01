@@ -1,4 +1,4 @@
 <map id="ff::RapidCommandRosCommand" name="ff::RapidCommandRosCommand">
-<area shape="rect" id="node1" title=" " alt="" coords="5,263,247,355"/>
-<area shape="rect" id="node2" href="$classff_1_1RapidSubRosPub.html" title="base class for rapid subscriber to ros publisher" alt="" coords="43,5,209,215"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,307,248,399"/>
+<area shape="rect" id="node2" href="$classff_1_1RapidSubRosPub.html" title="base class for rapid subscriber to ros publisher" alt="" coords="43,5,210,259"/>
 </map>

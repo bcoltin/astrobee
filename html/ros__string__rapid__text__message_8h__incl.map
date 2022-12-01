@@ -1,9 +1,7 @@
 <map id="communications/dds_ros_bridge/include/dds_ros_bridge/ros_string_rapid_text_message.h" name="communications/dds_ros_bridge/include/dds_ros_bridge/ros_string_rapid_text_message.h">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,323,76"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,213,64,240"/>
-<area shape="rect" id="node3" href="$ros__sub__rapid__pub_8h.html" title=" " alt="" coords="64,124,208,165"/>
-<area shape="rect" id="node6" title=" " alt="" coords="232,131,403,158"/>
-<area shape="rect" id="node7" title=" " alt="" coords="427,131,565,158"/>
-<area shape="rect" id="node4" title=" " alt="" coords="92,213,169,240"/>
-<area shape="rect" id="node5" title=" " alt="" coords="194,213,273,240"/>
+<area shape="rect" id="node1" title=" " alt="" coords="155,5,347,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,131,64,158"/>
+<area shape="rect" id="node3" title=" " alt="" coords="88,124,232,165"/>
+<area shape="rect" id="node4" title=" " alt="" coords="257,131,429,158"/>
+<area shape="rect" id="node5" title=" " alt="" coords="453,131,592,158"/>
 </map>

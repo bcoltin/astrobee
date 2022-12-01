@@ -7,5 +7,6 @@ var subsystems =
     [ "Guidance, Navigation & Control", "gnc.html", "gnc" ],
     [ "Behaviors", "beh.html", "beh" ],
     [ "Communications", "comms.html", "comms" ],
+    [ "Description", "urdf.html", null ],
     [ "Hardware", "hw.html", "hw" ]
 ];

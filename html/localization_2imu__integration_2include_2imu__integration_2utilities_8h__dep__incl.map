@@ -14,9 +14,10 @@
 <area shape="rect" id="node13" href="$imu__bias__tester_8cc.html" title=" " alt="" coords="2395,117,2566,158"/>
 <area shape="rect" id="node14" href="$imu__bias__tester__wrapper_8cc.html" title=" " alt="" coords="2590,109,2753,165"/>
 <area shape="rect" id="node15" href="$tools_2localization__rviz__plugins_2src_2utilities_8h.html" title=" " alt="" coords="2777,117,2971,158"/>
-<area shape="rect" id="node16" href="$imu__augmentor__display_8cc.html" title=" " alt="" coords="2341,213,2511,269"/>
-<area shape="rect" id="node17" href="$localization__graph__display_8cc.html" title=" " alt="" coords="2536,213,2745,269"/>
-<area shape="rect" id="node18" href="$localization__graph__panel_8cc.html" title=" " alt="" coords="2769,213,2979,269"/>
-<area shape="rect" id="node19" href="$pose__display_8cc.html" title=" " alt="" coords="3003,213,3169,269"/>
-<area shape="rect" id="node20" href="$tools_2localization__rviz__plugins_2src_2utilities_8cc.html" title=" " alt="" coords="3193,221,3395,262"/>
+<area shape="rect" id="node16" href="$depth__odometry__display_8cc.html" title=" " alt="" coords="2262,213,2433,269"/>
+<area shape="rect" id="node17" href="$imu__augmentor__display_8cc.html" title=" " alt="" coords="2457,213,2627,269"/>
+<area shape="rect" id="node18" href="$localization__graph__display_8cc.html" title=" " alt="" coords="2652,213,2861,269"/>
+<area shape="rect" id="node19" href="$localization__graph__panel_8cc.html" title=" " alt="" coords="2885,213,3095,269"/>
+<area shape="rect" id="node20" href="$pose__display_8cc.html" title=" " alt="" coords="3119,213,3285,269"/>
+<area shape="rect" id="node21" href="$tools_2localization__rviz__plugins_2src_2utilities_8cc.html" title=" " alt="" coords="3309,221,3511,262"/>
 </map>

@@ -83,6 +83,7 @@ td.inner_table {
     <li><a href="#command_Admin.wake">Admin.wake</a></li>
     <li><a href="#command_Admin.wakeSafe">Admin.wakeSafe</a></li>
     <li><a href="#command_Arm.armPanAndTilt">Arm.armPanAndTilt</a></li>
+    <li><a href="#command_Arm.deployArm">Arm.deployArm</a></li>
     <li><a href="#command_Arm.gripperControl">Arm.gripperControl</a></li>
     <li><a href="#command_Arm.stopArm">Arm.stopArm</a></li>
     <li><a href="#command_Arm.stowArm">Arm.stowArm</a></li>
@@ -90,6 +91,7 @@ td.inner_table {
     <li><a href="#command_Data.startRecording">Data.startRecording</a></li>
     <li><a href="#command_Data.stopRecording">Data.stopRecording</a></li>
     <li><a href="#command_GuestScience.customGuestScience">GuestScience.customGuestScience</a></li>
+    <li><a href="#command_GuestScience.restartGuestScience">GuestScience.restartGuestScience</a></li>
     <li><a href="#command_GuestScience.startGuestScience">GuestScience.startGuestScience</a></li>
     <li><a href="#command_GuestScience.stopGuestScience">GuestScience.stopGuestScience</a></li>
     <li><a href="#command_Mobility.autoReturn">Mobility.autoReturn</a></li>
@@ -108,6 +110,7 @@ td.inner_table {
     <li><a href="#command_Plan.wait">Plan.wait</a></li>
     <li><a href="#command_Power.powerOffItem">Power.powerOffItem</a></li>
     <li><a href="#command_Power.powerOnItem">Power.powerOnItem</a></li>
+    <li><a href="#command_Settings.enableAstrobeeIntercomms">Settings.enableAstrobeeIntercomms</a></li>
     <li><a href="#command_Settings.setCamera">Settings.setCamera</a></li>
     <li><a href="#command_Settings.setCameraRecording">Settings.setCameraRecording</a></li>
     <li><a href="#command_Settings.setCameraStreaming">Settings.setCameraStreaming</a></li>
@@ -188,7 +191,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Admin.loadNodelet">Admin.loadNodelet</a></div>
-  <div class="commandSpecNotes">Not implemented. This command is intended to load a ROS nodelet in the Astrobee flight software.<p/>There is an internal service advertised by the system monitor that provides a method very similar to this command, but as of Oct 2020, there is no way to invoke it through a standard Astrobee API call. Also note, the underlying system monitor service can't load nodelets that run on the HLP.</div>
+  <div class="commandSpecNotes">This command is intended to load a ROS nodelet in the Astrobee flight software. Please note, the underlying system monitor service can't load nodelets that run on the HLP.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>
@@ -204,16 +207,16 @@ td.inner_table {
     <td class="params_notes">Name of nodelet</td>
   </tr>
   <tr>
-    <td class="params_parameter">Type</td>
-    <td class="params_type">string</td>
-    <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
-    <td class="params_notes">Type of nodelet (namespace/classname). If left blank, the system monitor will default to the type specified in its config file, which should normally work fine.</td>
-  </tr>
-  <tr>
     <td class="params_parameter">Manager Name</td>
     <td class="params_type">string</td>
     <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
     <td class="params_notes">Which nodelet manager should load the nodelet. If left blank, the system monitor will default to using the managerName specified in the last heartbeat it received from the requested nodelet. (That should normally work fine, assuming the nodelet sent out at least one valid heartbeat.)</td>
+  </tr>
+  <tr>
+    <td class="params_parameter">Type</td>
+    <td class="params_type">string</td>
+    <td class="params_default"><span style="font-family: 'Courier';">&quot;&quot;</span></td>
+    <td class="params_notes">Type of nodelet (namespace/classname). If left blank, the system monitor will default to the type specified in its config file, which should normally work fine.</td>
   </tr>
   <tr>
     <td class="params_parameter">Bond Id</td>
@@ -323,7 +326,7 @@ td.inner_table {
 
 <div class="commandSpec">
   <div class="commandSpecId"><a name="command_Admin.unloadNodelet">Admin.unloadNodelet</a></div>
-  <div class="commandSpecNotes">Not implemented. This command is intended to unload a ROS nodelet in Astrobee's flight software. Its primary use is in the system monitor's fault response table, where it is the usual response if initialization of a nodelet fails. As of Oct 2020, there is an internal service that implements this function, but there is no way to invoke it through a standard Astrobee API call. Also, the internal service can't unload nodes running on the HLP.</div>
+  <div class="commandSpecNotes">This command is intended to unload a ROS nodelet in Astrobee's flight software. Its primary use is in the system monitor's fault response table, where it is the usual response if initialization of a nodelet fails. Please note, the internal service can't unload nodes running on the HLP.</div>
   <div class="commandSpecParams">
     <table class="params">
   <tr>
@@ -471,6 +474,19 @@ td.inner_table {
 
 
 <div class="commandSpec">
+  <div class="commandSpecId"><a name="command_Arm.deployArm">Arm.deployArm</a></div>
+  <div class="commandSpecNotes">Deploys arm. The motion sequence is:<ol><li>Pan to 0</li><li>Tilt to 0</li></ol><p/>See also Arm.armPanAndTilt for more discussion of the arm.</div>
+  <div class="commandSpecParams">
+    <table class="params">
+  <tr>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+
+<div class="commandSpec">
   <div class="commandSpecId"><a name="command_Arm.gripperControl">Arm.gripperControl</a></div>
   <div class="commandSpecNotes">Opens or closes gripper.<p/>Astrobee's arm has a passively under-actuated gripper with a single motor. Opening the gripper commands the motor to pull on a pair of tendons that open the fingers. Closing the gripper cuts power to the motor; the fingers are spring-loaded to close. The first time the gripper opens, it calibrates the motor encoder position by fully opening until the fingers contact a hard stop, then relaxes slightly to its nominal open position. On later open cycles, it opens directly to the nominal open position. Note that the motor consumes significant power holding the gripper open, so it should be closed when not actively in use. Holding it open for extended periods (minutes) runs the risk of triggering a motor overtemperature fault, which disables the motor.</div>
   <div class="commandSpecParams">
@@ -590,6 +606,35 @@ td.inner_table {
     <td class="params_type">string</td>
     <td class="params_default">required</td>
     <td class="params_notes">The command to send (usually formatted as a JSON dictionary, enabling an arbitrary number and types of parameters).</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+
+<div class="commandSpec">
+  <div class="commandSpecId"><a name="command_GuestScience.restartGuestScience">GuestScience.restartGuestScience</a></div>
+  <div class="commandSpecNotes">This command is the equivalent to issuing the stop guest science command and then the start guest science command. Sometimes guest science APKs become unresponsive and this is a quick way to try to get it work again. <p/>See GuestScience.startGuestScience for more on the guest science life cycle.</div>
+  <div class="commandSpecParams">
+    <table class="params">
+  <tr>
+    <th class="params_parameter">Parameter</th>
+    <th class="params_type">Type</th>
+    <th class="params_default">Default</th>
+    <th class="params_notes">Notes</th>
+  </tr>
+  <tr>
+    <td class="params_parameter">Apk Name</td>
+    <td class="params_type">string</td>
+    <td class="params_default">required</td>
+    <td class="params_notes">Which guest science APK to restart</td>
+  </tr>
+  <tr>
+    <td class="params_parameter">Wait</td>
+    <td class="params_type">long</td>
+    <td class="params_default">required</td>
+    <td class="params_notes">The time in seconds the guest science manager waits in between sending the stop and start commands to the guest science apk. Different apks will need different wait times to allow a complete shutdown before starting again. A 2 second wait time is recommended for simple guest science apks. For the sci_cam_image apk which has to release the science camera hardware resources, we empirically found a conservative wait time of 10 seconds worked reliably.</td>
   </tr>
 </table>
 
@@ -991,6 +1036,19 @@ td.inner_table {
 </table>
 </td>
     <td class="params_notes">Which component. Note: 'Front' means 'Forward'.</td>
+  </tr>
+</table>
+
+  </div>
+</div>
+
+
+<div class="commandSpec">
+  <div class="commandSpecId"><a name="command_Settings.enableAstrobeeIntercomms">Settings.enableAstrobeeIntercomms</a></div>
+  <div class="commandSpecNotes">Starts the Astrobee intercommunication software. This enables the robot to send and receive a subset of data to and from other Astrobees in the network. Please note, this command must be executed on each robot needed in the communication.</div>
+  <div class="commandSpecParams">
+    <table class="params">
+  <tr>
   </tr>
 </table>
 
@@ -1527,23 +1585,23 @@ td.inner_table {
   </tr>
   <tr>
     <td class="param_choices_name">Off</td>
-    <td class="param_choices_value">&quot;Off&quot;</td>
+    <td class="param_choices_value">&quot;off&quot;</td>
   </tr>
   <tr>
     <td class="param_choices_name">Quiet</td>
-    <td class="param_choices_value">&quot;Quiet&quot;</td>
+    <td class="param_choices_value">&quot;quiet&quot;</td>
   </tr>
   <tr>
     <td class="param_choices_name">Nominal</td>
-    <td class="param_choices_value">&quot;Nominal&quot;</td>
+    <td class="param_choices_value">&quot;nominal&quot;</td>
   </tr>
   <tr>
     <td class="param_choices_name">Difficult</td>
-    <td class="param_choices_value">&quot;Difficult&quot;</td>
+    <td class="param_choices_value">&quot;difficult&quot;</td>
   </tr>
   <tr>
     <td class="param_choices_name">Precision</td>
-    <td class="param_choices_value">&quot;Precision&quot;</td>
+    <td class="param_choices_value">&quot;precision&quot;</td>
   </tr>
 </table>
 </td>

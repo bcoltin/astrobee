@@ -1,10 +1,8 @@
 <map id="communications/dds_ros_bridge/src/ros_string_rapid_text_message.cc" name="communications/dds_ros_bridge/src/ros_string_rapid_text_message.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="115,5,338,61"/>
-<area shape="rect" id="node2" href="$ros__string__rapid__text__message_8h.html" title=" " alt="" coords="118,109,335,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,288,64,315"/>
-<area shape="rect" id="node4" href="$ros__sub__rapid__pub_8h.html" title=" " alt="" coords="64,199,208,240"/>
-<area shape="rect" id="node7" title=" " alt="" coords="232,206,403,233"/>
-<area shape="rect" id="node8" title=" " alt="" coords="427,206,565,233"/>
-<area shape="rect" id="node5" title=" " alt="" coords="92,288,169,315"/>
-<area shape="rect" id="node6" title=" " alt="" coords="194,288,273,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="139,5,362,61"/>
+<area shape="rect" id="node2" href="$ros__string__rapid__text__message_8h.html" title=" " alt="" coords="142,109,359,151"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,206,64,233"/>
+<area shape="rect" id="node4" title=" " alt="" coords="88,199,232,240"/>
+<area shape="rect" id="node5" title=" " alt="" coords="257,206,429,233"/>
+<area shape="rect" id="node6" title=" " alt="" coords="453,206,592,233"/>
 </map>

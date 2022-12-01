@@ -1,103 +1,119 @@
 var tools =
 [
-    [ "EKF Bag", "ekfbag.html", [
-      [ "ekf_graph", "ekfbag.html#autotoc_md459", null ],
-      [ "rosbag_to_csv", "ekfbag.html#autotoc_md460", null ],
-      [ "sparse_map_eval", "ekfbag.html#autotoc_md461", null ],
-      [ "ekf_diff", "ekfbag.html#autotoc_md462", null ],
-      [ "streamlit webserver", "ekfbag.html#autotoc_md463", null ],
-      [ "parameter_sweep.py", "ekfbag.html#autotoc_md464", null ],
-      [ "create_plots.py", "ekfbag.html#autotoc_md465", null ],
-      [ "bag_sweep.py", "ekfbag.html#autotoc_md466", null ],
-      [ "bag_and_parameter_sweep.py", "ekfbag.html#autotoc_md467", null ],
-      [ "create_average_plots.py", "ekfbag.html#autotoc_md468", null ]
-    ] ],
-    [ "EKF Video", "ekfvideo.html", null ],
-    [ "GNC Visualizer", "gncvisualizer.html", "gncvisualizer" ],
-    [ "Graph Bag", "graphbag.html", [
-      [ "Package Overview", "graphbag.html#autotoc_md486", null ],
-      [ "Tools", "graphbag.html#autotoc_md487", [
-        [ "Setting up your Environment", "sim_overview.html#autotoc_md438", null ],
-        [ "Running the Simulator", "sim_overview.html#autotoc_md439", [
-          [ "Simulator Flags", "sim_overview.html#autotoc_md440", [
-            [ "pose", "sim_overview.html#autotoc_md441", null ],
-            [ "gds", "sim_overview.html#autotoc_md442", null ],
-            [ "rviz", "sim_overview.html#autotoc_md443", null ],
-            [ "sviz", "sim_overview.html#autotoc_md444", null ],
-            [ "dds", "sim_overview.html#autotoc_md445", null ],
-            [ "speed", "sim_overview.html#autotoc_md446", null ],
-            [ "ns", "sim_overview.html#autotoc_md447", null ],
-            [ "robot", "sim_overview.html#autotoc_md448", null ],
-            [ "default", "sim_overview.html#autotoc_md449", null ],
-            [ "world", "sim_overview.html#autotoc_md450", null ],
-            [ "debug", "sim_overview.html#autotoc_md451", null ]
-          ] ]
-        ] ],
-        [ "Moving the Robot", "sim_overview.html#autotoc_md452", [
-          [ "Ground Data System", "sim_overview.html#autotoc_md453", null ],
-          [ "Teleop Tool", "sim_overview.html#autotoc_md454", null ],
-          [ "Guest Science Applications", "sim_overview.html#autotoc_md455", null ]
-        ] ],
-        [ "Images", "sim_overview.html#autotoc_md456", null ],
-        [ "Launching Multiple Robots", "sim_overview.html#autotoc_md457", null ],
-        [ "Simulator Issues", "sim_overview.html#autotoc_md458", [
-          [ "The program 'roslaunch/rosrun' is currently not installed", "sim_issues.html#autotoc_md422", null ],
-          [ "[Sim.launch] is neither a launch file in package [astrobee] ...", "sim_issues.html#autotoc_md423", null ],
-          [ "Rospack Error Finding Package", "sim_issues.html#autotoc_md424", null ],
-          [ "Issues Starting up the Simulator", "sim_issues.html#autotoc_md425", null ],
-          [ "Robot Body Does Not Show up in RVIZ", "sim_issues.html#autotoc_md426", null ],
-          [ "No Image message in RVIZ", "sim_issues.html#autotoc_md427", null ],
-          [ "Heartbeat Fault Detected", "sim_issues.html#autotoc_md428", null ],
-          [ "Command Fails due to Robot State", "sim_issues.html#autotoc_md429", null ],
-          [ "Tolerance Violated Errors", "sim_issues.html#autotoc_md430", null ],
-          [ "Keep in Zone Violation", "sim_issues.html#autotoc_md431", null ],
-          [ "Unable to Plan a Segment", "sim_issues.html#autotoc_md432", null ],
-          [ "Couldn't Configure the Mobility Node", "sim_issues.html#autotoc_md433", null ],
-          [ "GDS Node - Process has Died", "sim_issues.html#autotoc_md434", null ],
-          [ "The robot is spinning, flying higher than the world, or jumping around erratically", "sim_issues.html#autotoc_md435", null ],
-          [ "Teleop Tool reports no publisher for acks topic", "sim_issues.html#autotoc_md436", null ]
-        ] ],
-        [ "ROS Mode", "gncvisualizer.html#autotoc_md469", null ],
-        [ "DDS Mode", "gncvisualizer.html#autotoc_md470", [
-          [ "On-orbit activities", "gncvisualizer.html#autotoc_md471", null ]
-        ] ],
-        [ "Dependencies", "gncvisualizer.html#autotoc_md472", [
-          [ "If used along with the Astrobee Robot Software", "gncvisualizer.html#autotoc_md473", null ],
-          [ "If using as a standalone tool", "gncvisualizer.html#autotoc_md474", null ]
-        ] ],
-        [ "Installing dependencies", "gncvisualizer.html#autotoc_md475", [
-          [ "Installing Python", "gncvisualizer.html#autotoc_md476", null ],
-          [ "Installing PIP", "gncvisualizer.html#autotoc_md477", null ],
-          [ "Installing the RTI connector (DDS Only)", "gncvisualizer.html#autotoc_md478", null ],
-          [ "Installing QT in standalone mode", "gncvisualizer.html#autotoc_md479", null ]
-        ] ],
-        [ "Platform support", "gncvisualizer.html#autotoc_md480", null ],
-        [ "GraphBag", "graphbag.html#autotoc_md488", null ],
-        [ "BagImuFilterer", "graphbag.html#autotoc_md489", null ]
+    [ "Bag Processing", "bag_processing.html", [
+      [ "Package Overview", "bag_processing.html#autotoc_md587", null ],
+      [ "Usage Instructions", "bag_processing.html#autotoc_md588", null ],
+      [ "Scripts", "bag_processing.html#autotoc_md589", [
+        [ "<tt>apply_histogram_equalization_to_images</tt>", "bag_processing.html#autotoc_md590", null ],
+        [ "<tt>check_bag_for_gaps</tt>", "bag_processing.html#autotoc_md591", null ],
+        [ "<tt>clock_skew</tt>", "bag_processing.html#autotoc_md592", null ],
+        [ "<tt>csv_join</tt>", "bag_processing.html#autotoc_md593", null ],
+        [ "<tt>get_msg_stats</tt>", "bag_processing.html#autotoc_md594", null ],
+        [ "<tt>rosbag_debayer</tt>", "bag_processing.html#autotoc_md595", null ],
+        [ "<tt>rosbag_detect_bad_topics</tt>", "bag_processing.html#autotoc_md596", null ],
+        [ "<tt>rosbag_fix_all</tt>", "bag_processing.html#autotoc_md597", null ],
+        [ "<tt>rosbag_merge</tt>", "bag_processing.html#autotoc_md598", null ],
+        [ "<tt>rosbag_rewrite_types</tt>", "bag_processing.html#autotoc_md599", null ],
+        [ "<tt>rosbag_sample</tt>", "bag_processing.html#autotoc_md600", null ],
+        [ "<tt>rosbag_splice</tt>", "bag_processing.html#autotoc_md601", null ],
+        [ "<tt>rosbag_topic_filter</tt>", "bag_processing.html#autotoc_md602", null ],
+        [ "<tt>rosbag_trim</tt>", "bag_processing.html#autotoc_md603", null ],
+        [ "<tt>rosbag_verify</tt>", "bag_processing.html#autotoc_md604", null ]
       ] ],
-      [ "Scripts", "graphbag.html#autotoc_md490", [
-        [ "bag_sweep", "graphbag.html#autotoc_md491", null ],
-        [ "check_bags_for_gaps", "graphbag.html#autotoc_md492", null ],
-        [ "imu_analyzer_main", "graphbag.html#autotoc_md493", null ],
-        [ "merge_bags", "graphbag.html#autotoc_md494", null ]
+      [ "Utilities", "bag_processing.html#autotoc_md605", [
+        [ "<tt>utilities/bmr_renumber_enum</tt>", "bag_processing.html#autotoc_md606", null ]
+      ] ],
+      [ "Resources", "bag_processing.html#autotoc_md607", null ]
+    ] ],
+    [ "Calibration", "calibration.html", [
+      [ "Package Overview", "calibration.html#autotoc_md608", null ],
+      [ "Camera Target Based Intrinsics Calibration", "calibration.html#autotoc_md609", [
+        [ "Example Usage", "calibration.html#autotoc_md610", [
+          [ "Generate target detections from bagfiles", "calibration.html#autotoc_md611", null ],
+          [ "View target detection coverage in image space", "calibration.html#autotoc_md612", null ],
+          [ "Calibrate", "calibration.html#autotoc_md613", [
+            [ "System requirements and installation", "picoflexx_python.html#autotoc_md217", null ],
+            [ "Usage", "picoflexx_python.html#autotoc_md218", null ],
+            [ "Getting valid xyz coefficients", "picoflexx_python.html#autotoc_md219", null ],
+            [ "Calibration Parameters", "calibration.html#autotoc_md614", null ],
+            [ "Run Calibration", "calibration.html#autotoc_md615", null ],
+            [ "Calibration Output", "calibration.html#autotoc_md616", null ],
+            [ "Judging Calibration Results", "calibration.html#autotoc_md617", null ]
+          ] ]
+        ] ]
+      ] ],
+      [ "Tools", "calibration.html#autotoc_md621", [
+        [ "create_undistorted_images", "calibration.html#autotoc_md622", null ],
+        [ "run_camera_target_based_intrinsics_calibrator", "calibration.html#autotoc_md623", null ]
+      ] ],
+      [ "Scripts", "calibration.html#autotoc_md624", [
+        [ "calibrate_intrinsics_and_save_results.py", "calibration.html#autotoc_md625", null ],
+        [ "copy_calibration_params_to_config.py", "calibration.html#autotoc_md626", null ],
+        [ "get_bags_with_topic.py", "calibration.html#autotoc_md627", null ],
+        [ "make_error_histograms.py", "calibration.html#autotoc_md628", null ],
+        [ "save_images_with_target_detections.py", "calibration.html#autotoc_md629", null ],
+        [ "view_all_detections.py", "calibration.html#autotoc_md630", null ]
       ] ]
     ] ],
-    [ "Imu Bias Tester", "imubiastester.html", [
-      [ "Inputs", "imubiastester.html#autotoc_md496", null ],
-      [ "Outputs", "imubiastester.html#autotoc_md497", null ]
+    [ "GNC Visualizer", "gncvisualizer.html", "gncvisualizer" ],
+    [ "IMU Bias Tester", "imubiastester.html", [
+      [ "Usage", "imubiastester.html#autotoc_md649", null ],
+      [ "Inputs", "imubiastester.html#autotoc_md650", null ],
+      [ "Outputs", "imubiastester.html#autotoc_md651", null ]
+    ] ],
+    [ "Localization Analysis", "localizationanalysis.html", [
+      [ "Package Overview", "localizationanalysis.html#autotoc_md652", [
+        [ "ROS Mode", "gncvisualizer.html#autotoc_md631", null ],
+        [ "DDS Mode", "gncvisualizer.html#autotoc_md632", [
+          [ "On-orbit activities", "gncvisualizer.html#autotoc_md633", null ]
+        ] ],
+        [ "Dependencies", "gncvisualizer.html#autotoc_md634", [
+          [ "If used along with the Astrobee Robot Software", "gncvisualizer.html#autotoc_md635", null ],
+          [ "If using as a standalone tool", "gncvisualizer.html#autotoc_md636", null ]
+        ] ],
+        [ "Installing dependencies", "gncvisualizer.html#autotoc_md637", [
+          [ "Installing Python", "gncvisualizer.html#autotoc_md638", null ],
+          [ "Installing PIP", "gncvisualizer.html#autotoc_md639", null ],
+          [ "Installing the RTI connector (DDS Only)", "gncvisualizer.html#autotoc_md640", null ],
+          [ "Installing QT in standalone mode", "gncvisualizer.html#autotoc_md641", null ]
+        ] ],
+        [ "Platform support", "gncvisualizer.html#autotoc_md642", null ],
+        [ "ImuBiasTester", "imubiastester.html#autotoc_md648", null ],
+        [ "Usage Instructions", "localizationanalysis.html#autotoc_md653", null ]
+      ] ],
+      [ "Tools", "localizationanalysis.html#autotoc_md654", [
+        [ "<tt>convert_depth_msg</tt>", "localizationanalysis.html#autotoc_md655", null ],
+        [ "<tt>run_bag_imu_filterer</tt>", "localizationanalysis.html#autotoc_md656", null ],
+        [ "<tt>run_depth_odometry_adder</tt>", "localizationanalysis.html#autotoc_md657", null ],
+        [ "<tt>run_graph_bag</tt>", "localizationanalysis.html#autotoc_md658", null ],
+        [ "<tt>run_imu_bias_tester_adder</tt>", "localizationanalysis.html#autotoc_md659", null ],
+        [ "<tt>run_sparse_mapping_pose_adder</tt>", "localizationanalysis.html#autotoc_md660", null ]
+      ] ],
+      [ "Scripts", "localizationanalysis.html#autotoc_md661", [
+        [ "<tt>bag_and_parameter_sweep</tt>", "localizationanalysis.html#autotoc_md662", null ],
+        [ "<tt>bag_sweep</tt>", "localizationanalysis.html#autotoc_md663", null ],
+        [ "<tt>depth_odometry_parameter_sweep</tt>", "localizationanalysis.html#autotoc_md664", null ],
+        [ "<tt>get_average_opt_and_update_times</tt>", "localizationanalysis.html#autotoc_md665", null ],
+        [ "<tt>groundtruth_sweep</tt>", "localizationanalysis.html#autotoc_md666", null ],
+        [ "<tt>imu_analyzer</tt>", "localizationanalysis.html#autotoc_md667", null ],
+        [ "<tt>make_groundtruth</tt>", "localizationanalysis.html#autotoc_md668", null ],
+        [ "<tt>make_map</tt>", "localizationanalysis.html#autotoc_md669", null ],
+        [ "<tt>parameter_sweep</tt>", "localizationanalysis.html#autotoc_md670", null ],
+        [ "<tt>plot_all_results</tt>", "localizationanalysis.html#autotoc_md671", null ],
+        [ "<tt>plot_results</tt>", "localizationanalysis.html#autotoc_md672", null ],
+        [ "<tt>run_graph_bag_and_plot_results</tt>", "localizationanalysis.html#autotoc_md673", null ]
+      ] ]
     ] ],
     [ "Localization Rviz Plugins", "localizationrvizplugins.html", [
-      [ "Package Overview", "localizationrvizplugins.html#autotoc_md498", [
-        [ "ImuBiasTester", "imubiastester.html#autotoc_md495", null ],
-        [ "Plugins", "localizationrvizplugins.html#autotoc_md499", null ],
-        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md500", null ],
-        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md501", null ],
-        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md502", null ],
-        [ "Pose Display", "localizationrvizplugins.html#autotoc_md503", null ]
+      [ "Package Overview", "localizationrvizplugins.html#autotoc_md674", [
+        [ "Plugins", "localizationrvizplugins.html#autotoc_md675", null ],
+        [ "Localization Graph Display", "localizationrvizplugins.html#autotoc_md676", null ],
+        [ "Localization Graph Panel", "localizationrvizplugins.html#autotoc_md677", null ],
+        [ "Imu Augmentor Display", "localizationrvizplugins.html#autotoc_md678", null ],
+        [ "Pose Display", "localizationrvizplugins.html#autotoc_md679", null ]
       ] ]
     ] ],
-    [ "RViz Visualizer", "rvizvisualizer.html", null ],
-    [ "Simulator", "simulator.html", "simulator" ],
-    [ "Visualeyez marker tracking system", "visualeyez.html", null ],
-    [ "DDS Profile and Types", "dds_profile.html", null ]
+    [ "DDS Profile and Types", "dds_profile.html", null ],
+    [ "Interactive Marker Teleop", "interactive_marker_teleop.html", null ],
+    [ "Performance Tester", "performance_tester.html", null ]
 ];
